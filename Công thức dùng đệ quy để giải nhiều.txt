@@ -1,0 +1,12 @@
+Công thức dùng đệ quy để giải nhiều bài Quy họach động Dùng ít nhất:
+
+1. C6ng thức truy hồi: sử dụng hàm min để tính tối ưu của từng điểm nhằm xây dựng tối ưu của bài toán
+	Cách làm: Giá trị tại chỗ + Min(nhánh 1, nhánh 2)
+2. Stopping condition của bài tối ưu: phải trả về 2 trường hợp: giá trị kết thúc có trên dữ liệu và giá trị kết thúc ở ngoài biên
+để khiến hàm Min chọn/không chọn giá trị có trên dữ liệu(ứng vs inf hoặc 0)
+	Nên nhớ tối ưu đoạn con và tối ưu sau cùng( chập lại) là khác nhau:
+	=> Nếu chập lại, lưu tổng các phương pháp tối ưu cho các đoạn con => có thể bị trùng lặp tính toán, làm hỏng tính kế thừa riêng biệt
+	của từng đoạn => dẫn đến kết quả sau cùng của bài toán sẽ nhỏ hơn nhiều so với kết quả tối ưu phải có.
+	=> Chỉ so sánh và trả về kết quả tối ưu ở bước tính toán cuối cùng nhằm tìm lời giải.
+3. Nhớ sử dụng bảng nhớ phụ để giúp đệ quy tránh phải tính toán lại
+
